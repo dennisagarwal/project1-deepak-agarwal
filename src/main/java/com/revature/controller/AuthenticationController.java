@@ -1,5 +1,6 @@
 package com.revature.controller;
 
+import com.revature.dto.LoginDTO;
 import com.revature.model.User;
 import com.revature.service.UserService;
 import io.javalin.Javalin;
@@ -16,7 +17,9 @@ public class AuthenticationController implements Controller {
     private Handler login = (ctx) -> {
         System.out.println("Login endpoint invoked");
 
-        User loginInfo = ctx.bodyAsClass(User.class);
+        LoginDTO loginInfo = ctx.bodyAsClass(LoginDTO.class);
+       User user = userService.login(loginInfo.getUsername(), loginInfo.getPassword());
+       ctx.json(user);
         System.out.println(loginInfo);
     };
 

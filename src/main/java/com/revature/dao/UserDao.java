@@ -16,8 +16,8 @@ public class UserDao {
     public User getUserByUsernameAndPassword(String username, String password) throws SQLException {
 
         try(Connection con = ConnectionUtility.getConnection()){
-          String sql = "SELECT users.id, users.username, users.password, user_role.role " +
-                  "FROM users " +
+          String sql = "SELECT users.id, users.username, users.password, user_role.role, users.first_name, users.last_name, " +
+                  " users.email FROM users " +
                   "INNER JOIN user_role " +
                   "ON users.user_role_id = user_role.id " +
                   "WHERE users.username = ? AND users.password = ?";
@@ -33,8 +33,13 @@ public class UserDao {
                 String un = rs.getString("username");
                 String pw = rs.getString("password");
                 String role = rs.getString("role");
+                String fn = rs.getString("first_name");
+                String ln = rs.getString("last_name");
+                String em = rs.getString("email");
 
-                return new User(userId, un, pw, role);
+
+
+                return new User(userId, un, pw, role,fn,ln,em);
             }
             return null;
         }

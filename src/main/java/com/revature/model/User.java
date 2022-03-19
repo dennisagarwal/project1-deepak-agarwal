@@ -8,16 +8,23 @@ public class User {
     private String username;
     private String password;
     private String userRole;
+    private String firstName;
+    private String lastName;
+    private String emailId;
+
 
     public User() {
 
     }
 
-    public User(int id, String username, String password, String userRole) {
+    public User(int id, String username, String password, String userRole, String firstName, String lastName, String emailId) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.userRole = userRole;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.emailId =emailId;
     }
 
     public int getId() {
@@ -52,17 +59,41 @@ public class User {
         this.userRole = userRole;
     }
 
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmailId() {
+        return emailId;
+    }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         User user = (User) o;
-        return id == user.id && Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(userRole, user.userRole);
+        return id == user.id && Objects.equals(username, user.username) && Objects.equals(password, user.password) && Objects.equals(userRole, user.userRole) && Objects.equals(firstName, user.firstName) && Objects.equals(lastName, user.lastName) && Objects.equals(emailId, user.emailId);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, username, password, userRole);
+        return Objects.hash(id, username, password, userRole, firstName, lastName, emailId);
     }
 
     @Override
@@ -72,6 +103,10 @@ public class User {
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
                 ", userRole='" + userRole + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", emailId='" + emailId + '\'' +
                 '}';
     }
 }
+
