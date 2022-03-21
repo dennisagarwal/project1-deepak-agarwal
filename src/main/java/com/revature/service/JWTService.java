@@ -19,13 +19,11 @@ public class JWTService {
             key = Keys.hmacShaKeyFor(secret); //create a key using
     }
 
-    //Signing a JWT with the key
-    public String createJWT(User user){
-//        Key key = Keys.secretKeyFor(SignatureAlgorithm.HS256);
 
+    public String createJWT(User user){
         String jwt = Jwts.builder()
                 .setSubject(user.getUsername())
-                .claim("user_id", user.getId())
+                .claim("user_id",  user.getId())
                 .claim("user_role", user.getUserRole())
                 .signWith(key)
                 .compact();
@@ -34,17 +32,11 @@ public class JWTService {
     }
 
     //validating a JWT with the key
-    public void validateJwt(String jwt){
+    public Jws<Claims> parseJwt(String jwt){
         try{
             Jws<Claims> token = Jwts.parserBuilder().setSigningKey(key).build().parseClaimsJws(jwt);
-//            System.out.println(token.getBody());
-            String username = token.getBody().getSubject();
-            Integer userId = token.getBody().get("user_id", Integer.class);
-            String userRole = token.getBody().get("user_role",String.class);
 
-            System.out.println(username);
-            System.out.println(userId);
-            System.out.println(userRole);
+            return token;
 
         }catch(JwtException e){
             e.printStackTrace();

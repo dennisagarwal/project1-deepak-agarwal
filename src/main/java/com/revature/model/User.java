@@ -27,6 +27,12 @@ public class User {
         this.emailId =emailId;
     }
 
+    public User(String eName, String ePassword, String eRole) {
+        this.username = eName;
+        this.password = ePassword;
+        this.userRole = eRole;
+    }
+
     public int getId() {
         return id;
     }
