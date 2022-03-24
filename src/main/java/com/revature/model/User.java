@@ -27,11 +27,19 @@ public class User {
         this.emailId =emailId;
     }
 
-    public User(String eName, String ePassword, String eRole) {
-        this.username = eName;
-        this.password = ePassword;
-        this.userRole = eRole;
+    public User(int aId, String aUserName, String aFirst, String aLast, String aEmail) {
+        this.id = aId;
+        this.username =  aUserName;
+        this.password = aFirst;
+        this.userRole = aLast;
+        this.emailId =aEmail;
     }
+
+//    public User(String aName, String aPassword, String aRole) {
+//        this.username = aName;
+//        this.password = aPassword;
+//        this.userRole = aRole;
+//    }
 
     public int getId() {
         return id;

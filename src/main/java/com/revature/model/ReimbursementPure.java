@@ -2,8 +2,7 @@ package com.revature.model;
 
 import java.util.Objects;
 
-public class Reimbursement {
-
+public class ReimbursementPure {
     private int id;
     private int amount;
     private String submittedDate;
@@ -13,10 +12,14 @@ public class Reimbursement {
     private User author;
     private User resolver;
 
-    private String status;
-    private String type;
+    private int status;
+    private int type;
 
-    public Reimbursement(int id, int amount, String submittedDate, String resolvedDate, String description, User author, User resolver, String status, String type) {
+    public ReimbursementPure() {
+
+    }
+
+    public ReimbursementPure(int id, int amount, String submittedDate, String resolvedDate, String description, User author, User resolver, int status, int type) {
         this.id = id;
         this.amount = amount;
         this.submittedDate = submittedDate;
@@ -28,17 +31,14 @@ public class Reimbursement {
         this.type = type;
     }
 
-    public Reimbursement(int rsId, int rsAmount, String rsSubmitted, String rsResolved, User employee, User manager, String rsStatus, String rsType) {
-        this.id=rsId;
-        this.amount=rsAmount;
-        this.submittedDate=rsSubmitted;
-        this.resolvedDate=rsResolved;
-        this.author = employee;
-        this.resolver= manager;
-        this.status= rsStatus;
-        this.type= rsType;
+    public ReimbursementPure(int reimbursementId, int amount, String submitDate, int status, int type, User author) {
+        this.id = reimbursementId;
+        this.amount = amount;
+        this.submittedDate = submitDate;
+        this.status = status;
+        this.type = type;
+        this.author = author;
     }
-
 
 
     public int getId() {
@@ -97,19 +97,19 @@ public class Reimbursement {
         this.resolver = resolver;
     }
 
-    public String getStatus() {
+    public int getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(int status) {
         this.status = status;
     }
 
-    public String getType() {
+    public int getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(int type) {
         this.type = type;
     }
 
@@ -117,8 +117,8 @@ public class Reimbursement {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Reimbursement that = (Reimbursement) o;
-        return id == that.id && amount == that.amount && Objects.equals(submittedDate, that.submittedDate) && Objects.equals(resolvedDate, that.resolvedDate) && Objects.equals(description, that.description) && Objects.equals(author, that.author) && Objects.equals(resolver, that.resolver) && Objects.equals(status, that.status) && Objects.equals(type, that.type);
+        ReimbursementPure that = (ReimbursementPure) o;
+        return id == that.id && amount == that.amount && status == that.status && type == that.type && Objects.equals(submittedDate, that.submittedDate) && Objects.equals(resolvedDate, that.resolvedDate) && Objects.equals(description, that.description) && Objects.equals(author, that.author) && Objects.equals(resolver, that.resolver);
     }
 
     @Override
@@ -128,7 +128,7 @@ public class Reimbursement {
 
     @Override
     public String toString() {
-        return "Reimbursement{" +
+        return "ReimbursementPure{" +
                 "id=" + id +
                 ", amount=" + amount +
                 ", submittedDate='" + submittedDate + '\'' +
@@ -136,8 +136,10 @@ public class Reimbursement {
                 ", description='" + description + '\'' +
                 ", author=" + author +
                 ", resolver=" + resolver +
-                ", status='" + status + '\'' +
-                ", type='" + type + '\'' +
+                ", status=" + status +
+                ", type=" + type +
                 '}';
     }
 }
+
+
