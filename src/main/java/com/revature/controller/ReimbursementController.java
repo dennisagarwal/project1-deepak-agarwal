@@ -66,10 +66,6 @@ public class ReimbursementController implements Controller {
         ctx.json(getDto);
     };
 
-//    private Handler getAllReimbursements=(ctx)->{
-//
-//    };
-
 
     @Override
     public void mapEndpoints(Javalin app) {

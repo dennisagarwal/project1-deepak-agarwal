@@ -6,6 +6,7 @@ import com.revature.controller.Controller;
 import com.revature.controller.ExceptionController;
 import com.revature.dao.ReimbursementDao;
 import com.revature.dao.UserDao;
+import com.revature.model.User;
 import com.revature.utility.ConnectionUtility;
 import io.javalin.Javalin;
 
@@ -14,6 +15,12 @@ import java.sql.SQLException;
 public class Driver {
 
     public static void main(String[] args)  {
+//        User user = new User()
+//        try{
+//            System.out.println(dao.getAllReimbursements());
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
         ReimbursementDao dao = new ReimbursementDao();
          try{
              System.out.println(dao.getAllReimbursements());

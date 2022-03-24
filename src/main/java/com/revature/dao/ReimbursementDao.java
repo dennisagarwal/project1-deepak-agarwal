@@ -86,14 +86,16 @@ public class ReimbursementDao {
 
               //user employee
               int eId = rs.getInt("employee_id");
+              String eName = rs.getString("employee_name");
               String eFirst = rs.getString("employee_first");
               String eLast = rs.getString("employee_last");
-              String eName = rs.getString("employee_name");
-              String ePassword = rs.getString("employee_password");
-              String eRole = "employee";
               String eEmail = rs.getString("employee_email");
+              String eRole = "employee";
+//              String ePassword = rs.getString("employee_password");
 
-              User employee = new User(eId,eFirst,eLast,eName, ePassword, eRole,eEmail);
+
+              User employee = new User(eId,eName,eFirst,eLast,eEmail,eRole);
+//              User employee = new User(eId,eName,eFirst,eLast,eEmail,eRole, ePassword);
 
               //user manager
               int mId = rs.getInt("manager_id");
@@ -104,9 +106,9 @@ public class ReimbursementDao {
               String mRole = "manager";
               String mEmail = rs.getString("manager_email");
 
-              User manager = new User(mId,mFirst,mLast,mName, mPassword, mRole,mEmail);
-
-              Reimbursement r = new Reimbursement(rsId, rsAmount, rsSubmitted, rsResolved, employee, manager,rsStatus,rsType);
+//              User manager = new User(mId,mFirst,mLast,mName, mPassword, mRole,mEmail);
+              User manager = new User(mId,mFirst,mLast,mName,mEmail, mRole);
+              Reimbursement r = new Reimbursement(rsId, rsAmount, rsSubmitted, rsResolved,rsStatus,rsType, employee, manager,rsStatus);
 
               reimbursements.add(r);
           }

@@ -40,10 +40,10 @@ public class ReimbursementService {
         for (Reimbursement reimbursement : reimbursements){
 
             reimbursementDTOs.add(new GetReimbursementDTO(reimbursement.getId(), reimbursement.getAmount(), reimbursement.getSubmittedDate(),
-                    reimbursement.getResolvedDate(),reimbursement.getStatus(), reimbursement.getType(),reimbursement.getAuthor().getId(),
-                    reimbursement.getAuthor().getUsername(),
-                    reimbursement.getAuthor().getFirstName(),reimbursement.getAuthor().getLastName(),reimbursement.getAuthor().getEmailId(),
-                    reimbursement.getAuthor().getUserRole(),
+                    reimbursement.getResolvedDate(),reimbursement.getStatus(), reimbursement.getType(),
+                    reimbursement.getAuthor().getId(), reimbursement.getAuthor().getUsername(),reimbursement.getAuthor().getFirstName(),
+                    reimbursement.getAuthor().getLastName(),reimbursement.getAuthor().getEmailId(),reimbursement.getAuthor().getUserRole(),
+
                     reimbursement.getResolver().getId(),reimbursement.getResolver().getUsername(),reimbursement.getResolver().getFirstName(),
                     reimbursement.getResolver().getLastName(),reimbursement.getResolver().getEmailId(), reimbursement.getResolver().getUserRole()
                     ));
@@ -53,6 +53,5 @@ public class ReimbursementService {
     }
 
 
-//    public void addReimbursements() {
-//    }
+
 }

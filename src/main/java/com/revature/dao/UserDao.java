@@ -31,15 +31,16 @@ public class UserDao {
             if(rs.next()){
                 int userId = rs.getInt("id");
                 String un = rs.getString("username");
-                String pw = rs.getString("password");
-                String role = rs.getString("role");
+//                String pw = rs.getString("password");
+
                 String fn = rs.getString("first_name");
                 String ln = rs.getString("last_name");
                 String em = rs.getString("email");
+                String role = rs.getString("role");
 
 
-
-                return new User(userId, un, pw, role,fn,ln,em);
+//                return new User(userId, un, pw, role,fn,ln,em);
+                return new User(userId, un,  role,fn,ln,em);
             }
             return null;
         }

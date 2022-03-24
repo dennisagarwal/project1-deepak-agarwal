@@ -6,40 +6,35 @@ public class User {
 
     private int id;
     private String username;
-    private String password;
-    private String userRole;
     private String firstName;
     private String lastName;
+    private String password;
     private String emailId;
-
+    private String userRole;
 
     public User() {
 
     }
 
-    public User(int id, String username, String password, String userRole, String firstName, String lastName, String emailId) {
+    public User(int id, String username,String firstName, String lastName,  String emailId, String userRole) {
         this.id = id;
         this.username = username;
-        this.password = password;
-        this.userRole = userRole;
         this.firstName = firstName;
         this.lastName = lastName;
+//        this.password = password;
         this.emailId =emailId;
+        this.userRole = userRole;
+
     }
 
     public User(int aId, String aUserName, String aFirst, String aLast, String aEmail) {
         this.id = aId;
         this.username =  aUserName;
-        this.password = aFirst;
-        this.userRole = aLast;
+        this.firstName = aFirst;
+        this.lastName = aLast;
         this.emailId =aEmail;
     }
 
-//    public User(String aName, String aPassword, String aRole) {
-//        this.username = aName;
-//        this.password = aPassword;
-//        this.userRole = aRole;
-//    }
 
     public int getId() {
         return id;
@@ -55,22 +50,6 @@ public class User {
 
     public void setUsername(String username) {
         this.username = username;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getUserRole() {
-        return userRole;
-    }
-
-    public void setUserRole(String userRole) {
-        this.userRole = userRole;
     }
 
     public String getFirstName() {
@@ -89,12 +68,28 @@ public class User {
         this.lastName = lastName;
     }
 
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public String getEmailId() {
         return emailId;
     }
 
     public void setEmailId(String emailId) {
         this.emailId = emailId;
+    }
+
+    public String getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(String userRole) {
+        this.userRole = userRole;
     }
 
     @Override

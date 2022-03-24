@@ -28,17 +28,18 @@ public class Reimbursement {
         this.type = type;
     }
 
-    public Reimbursement(int rsId, int rsAmount, String rsSubmitted, String rsResolved, User employee, User manager, String rsStatus, String rsType) {
+
+    public Reimbursement(int rsId, int rsAmount, String rsSubmitted, String rsResolved, String rsStatus, String rsType, User employee, User manager, String rsStatus1) {
         this.id=rsId;
         this.amount=rsAmount;
         this.submittedDate=rsSubmitted;
         this.resolvedDate=rsResolved;
-        this.author = employee;
-        this.resolver= manager;
         this.status= rsStatus;
         this.type= rsType;
-    }
+        this.author = employee;
+        this.resolver= manager;
 
+    }
 
 
     public int getId() {
