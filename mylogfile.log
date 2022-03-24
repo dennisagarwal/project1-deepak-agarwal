@@ -15372,3 +15372,31 @@ org.postgresql.util.PSQLException: No value specified for parameter 1.
 23 03 2022 - 23:52:41.256 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
 23 03 2022 - 23:52:41.442 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
 23 03 2022 - 23:52:41.443 [main] INFO  io.javalin.Javalin - Javalin started in 207ms \o/
+24 03 2022 - 08:14:09.880 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+24 03 2022 - 08:14:09.909 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @4453ms to org.eclipse.jetty.util.log.Slf4jLog
+24 03 2022 - 08:14:09.910 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+24 03 2022 - 08:14:09.933 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+24 03 2022 - 08:14:10.173 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+24 03 2022 - 08:14:10.173 [main] INFO  io.javalin.Javalin - Javalin started in 264ms \o/
+24 03 2022 - 08:16:02.408 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+24 03 2022 - 08:16:02.418 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1736ms to org.eclipse.jetty.util.log.Slf4jLog
+24 03 2022 - 08:16:02.419 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+24 03 2022 - 08:16:02.440 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+24 03 2022 - 08:16:02.619 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+24 03 2022 - 08:16:02.619 [main] INFO  io.javalin.Javalin - Javalin started in 200ms \o/

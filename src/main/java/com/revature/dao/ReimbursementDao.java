@@ -63,13 +63,13 @@ public class ReimbursementDao {
                   " manager_user.username as manager_name,manager_user.password as manager_password,manager_user.email as manager_email, " +
                   " rs.status ,rt.type   " +
                   " from reimbursements " +
-                  " inner join users employee_user " +
+                  " LEFT join users employee_user " +
                   " on employee_user.id = reimbursements.reimbursements_author " +
-                  " inner join users manager_user  " +
+                  " LEFT join users manager_user  " +
                   " on manager_user.id = reimbursements.reimbursements_resolver   " +
-                  " inner join reimbursement_status rs " +
+                  " LEFT join reimbursement_status rs " +
                   " on rs.id = reimbursements.reimbursements_status_id " +
-                  " inner join reimbursement_type rt  " +
+                  " LEFT join reimbursement_type rt  " +
                   " on rt.id = reimbursements.reimbursements_type_id  ";
 
           PreparedStatement pstmt = con.prepareStatement(sql);
