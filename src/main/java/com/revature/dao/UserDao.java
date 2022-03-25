@@ -40,7 +40,7 @@ public class UserDao {
 
 
 //                return new User(userId, un, pw, role,fn,ln,em);
-                return new User(userId, un,  role,fn,ln,em);
+                return new User(userId, un,  fn,ln,em,role);
             }
             return null;
         }

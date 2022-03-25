@@ -12,8 +12,93 @@ import java.util.List;
 
 public class ReimbursementDao {
 
+    public Reimbursement resolveReimbursement(int reimbursementId ,int statusId, int resolverId ) throws SQLException {
+        try (Connection con = ConnectionUtility.getConnection()) {
+            con.setAutoCommit(false);
+            String sql = "update reimbursements " +
+                    " SET reimbursements_status_id = ?, " +
+                    " reimbursements_resolver = ? " +
+                    " where id = ? ";
+
+            PreparedStatement pstmt = con.prepareStatement(sql);
+//            pstmt.setInt(1, resolveDate);
+            pstmt.setInt(1, statusId);
+            pstmt.setInt(2, resolverId);
+            pstmt.setInt(3, reimbursementId);
+
+            pstmt.executeUpdate();
+
+
+            String sql2 = "Select reimbursements.id as rs_id, reimbursements.reimbursements_amount as rs_amount , " +
+                    " reimbursements.reimbursements_submitted as rs_submitted, reimbursements.reimbursements_resolved as rs_resolved, " +
+                    " employee_user.id as employee_id,employee_user.first_name as employee_first,employee_user.last_name as employee_last," +
+                    " employee_user.username as employee_name,employee_user.password as employee_password,employee_user.email as employee_email, " +
+                    " manager_user.id as manager_id,manager_user.first_name as manager_first,manager_user.last_name as manager_last," +
+                    " manager_user.username as manager_name,manager_user.password as manager_password,manager_user.email as manager_email, " +
+                    " rs.status ,rt.type   " +
+                    " from reimbursements " +
+                    " LEFT join users employee_user " +
+                    " on employee_user.id = reimbursements.reimbursements_author " +
+                    " LEFT join users manager_user  " +
+                    " on manager_user.id = reimbursements.reimbursements_resolver   " +
+                    " LEFT join reimbursement_status rs " +
+                    " on rs.id = reimbursements.reimbursements_status_id " +
+                    " LEFT join reimbursement_type rt  " +
+                    " on rt.id = reimbursements.reimbursements_type_id  " +
+                    " where reimbursements.id= ? ";
+
+            PreparedStatement pstmt2 = con.prepareStatement(sql2);
+            pstmt2.setInt(1, reimbursementId);
+
+            ResultSet rs2 = pstmt2.executeQuery();
+            rs2.next();
+
+                //Reimbursements
+                int rsId = rs2.getInt("rs_id");
+                int rsAmount = rs2.getInt("rs_amount");
+                String rsSubmitted = rs2.getString("rs_submitted");
+                String rsResolved = rs2.getString("rs_resolved");
+                String rsStatus = rs2.getString("status");
+                String rsType = rs2.getString("type");
+
+                //user employee
+                int eId = rs2.getInt("employee_id");
+                String eName = rs2.getString("employee_name");
+                String eFirst = rs2.getString("employee_first");
+                String eLast = rs2.getString("employee_last");
+                String eEmail = rs2.getString("employee_email");
+                String eRole = "employee";
+//              String ePassword = rs.getString("employee_password");
+
+
+                User employee = new User(eId, eName, eFirst, eLast, eEmail, eRole);
+//              User employee = new User(eId,eName,eFirst,eLast,eEmail,eRole, ePassword);
+
+                //user manager
+                int mId = rs2.getInt("manager_id");
+                String mName = rs2.getString("manager_name");
+                String mFirst = rs2.getString("manager_first");
+                String mLast = rs2.getString("manager_last");
+            String mEmail = rs2.getString("manager_email");
+//                String mPassword = rs2.getString("manager_password");
+                String mRole = "manager";
+
+
+//              User manager = new User(mId,mFirst,mLast,mName, mPassword, mRole,mEmail);
+                User manager = new User(mId,mName, mFirst, mLast, mEmail, mRole);
+                Reimbursement r = new Reimbursement(rsId, rsAmount, rsSubmitted, rsResolved, rsStatus, rsType, employee, manager, rsStatus);
+
+                con.commit();
+                return r;
+
+        }
+    }
+
+
     public ReimbursementPure addReimbursements(int authorId ,AddReimbursementDTO dto) throws SQLException {
         try (Connection con = ConnectionUtility.getConnection()) {
+
+            con.setAutoCommit(false);//we could set autocommit and at the end commit the change
             String sql = "insert into reimbursements (reimbursements_amount,reimbursements_submitted, " +
                     "reimbursements_status_id,reimbursements_type_id, reimbursements_author) " +
                     "values (?,?,?,?,?); ";
@@ -48,6 +133,9 @@ public class ReimbursementDao {
 
             ReimbursementPure reimbursementPure = new ReimbursementPure(reimbursementId,dto.getAmount(),dto.getSubmitDate(),dto.getStatus(),
                     dto.getType(),author);
+
+            con.commit();
+
             return reimbursementPure;
         }
     };

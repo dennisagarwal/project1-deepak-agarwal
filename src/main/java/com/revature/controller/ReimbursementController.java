@@ -20,28 +20,20 @@ public class ReimbursementController implements Controller {
 
     private JWTService jwtService;
     private ReimbursementService reimbursementService;
-
-    public ReimbursementController(){
-        this.jwtService = new JWTService();
-        this.reimbursementService = new ReimbursementService();
-    }
-
-
     private Handler getAllReimbursements = (ctx) -> {
         String jwt = ctx.header("Authorization").split(" ")[1];
 
-                Jws<Claims> token = this.jwtService.parseJwt(jwt);
+        Jws<Claims> token = this.jwtService.parseJwt(jwt);
 
-                if(!token.getBody().get("user_role").equals("manager")){
-                    throw new UnauthorizedResponse("You must be a manager to access ths endpoint");
-                }
-                List<GetReimbursementDTO> reimbursements = this.reimbursementService.getAllReimbursements();
-                 ctx.json(reimbursements);
+        if (!token.getBody().get("user_role").equals("manager")) {
+            throw new UnauthorizedResponse("You must be a manager to access ths endpoint");
+        }
+        List<GetReimbursementDTO> reimbursements = this.reimbursementService.getAllReimbursements();
+        ctx.json(reimbursements);
         System.out.println(reimbursements);
 //                ctx.json("Successfully accessed GET /reimbursements");
 
     };
-
     //Authorization logic
     //1. user role should be employee (logged in)
     //2. user id should match who is actually logged in
@@ -50,27 +42,55 @@ public class ReimbursementController implements Controller {
 
         Jws<Claims> token = this.jwtService.parseJwt(jwt);
 
-        if(!token.getBody().get("user_role").equals("employee")){
+        if (!token.getBody().get("user_role").equals("employee")) {
             throw new UnauthorizedResponse(("You must be an employee to access this endpoint"));
         }
         String userId = ctx.pathParam("user_id");
 
-            int id = Integer.parseInt(userId);
+        int id = Integer.parseInt(userId);
 
 
-        if(!token.getBody().get("user_id").equals(id)){
+        if (!token.getBody().get("user_id").equals(id)) {
             throw new UnauthorizedResponse("You cannot add a reimbursement for other than yourself");
-        };
+        }
+        ;
         AddReimbursementDTO dto = ctx.bodyAsClass(AddReimbursementDTO.class);
-        GetReimbursementPureDTO getDto =this.reimbursementService.addReimbursements(id,dto);
+        GetReimbursementPureDTO getDto = this.reimbursementService.addReimbursements(id, dto);
+        ctx.status(201);
         ctx.json(getDto);
     };
+    private Handler resolveReimbursement = (ctx) -> {
+        String jwt = ctx.header("Authorization").split(" ")[1];
+        Jws<Claims> token = this.jwtService.parseJwt(jwt);
 
+        if (!token.getBody().get("user_role").equals("manager")) {
+            throw new UnauthorizedResponse(("You must be logged in as manager"));
+        }
+
+        String reimbursementId = ctx.pathParam("reimbursement_id");
+        String status = ctx.queryParam("status");
+        int userId = token.getBody().get("user_id", Integer.class);
+
+        if (status == null) {
+            throw new IllegalArgumentException("You need a resolve query parameter when attempting to resolve an reimbursement");
+        }
+
+          GetReimbursementDTO reimbursement = this.reimbursementService.resolveReimbursement(reimbursementId,status,userId);
+          ctx.json(reimbursement);
+        //        int st = Integer.parseInt(status);
+
+    };
+
+    public ReimbursementController() {
+        this.jwtService = new JWTService();
+        this.reimbursementService = new ReimbursementService();
+    }
 
     @Override
     public void mapEndpoints(Javalin app) {
 //        app.get("/test", test);
         app.get("/reimbursements", getAllReimbursements);
-        app.post("/users/{user_id}/reimbursements",addReimbursements);
+        app.post("/users/{user_id}/reimbursements", addReimbursements);
+        app.patch("/reimbursements/{reimbursement_id}", resolveReimbursement);
     }
 }

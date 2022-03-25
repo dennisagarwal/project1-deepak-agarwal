@@ -23,6 +23,30 @@ public class ReimbursementService {
         this.reimbursementDao = mockDao;
     }
 
+    public GetReimbursementDTO resolveReimbursement(String reimbursementId,String statusId, int resolverId) throws SQLException {
+        try{
+            int intReimbursementId = Integer.parseInt(reimbursementId);
+
+            int intStatusId = Integer.parseInt(statusId);
+
+            Reimbursement reimbursement = this.reimbursementDao.resolveReimbursement(intReimbursementId,intStatusId,resolverId);
+
+            return new GetReimbursementDTO(reimbursement.getId(),reimbursement.getAmount(),reimbursement.getSubmittedDate(),
+                    reimbursement.getStatus(),reimbursement.getType(),
+                    reimbursement.getAuthor().getId(),
+                    reimbursement.getAuthor().getUsername(),
+                    reimbursement.getAuthor().getFirstName(),reimbursement.getAuthor().getLastName(),reimbursement.getAuthor().getEmailId(),
+                    reimbursement.getAuthor().getUserRole(),
+
+                    reimbursement.getResolver().getId(),reimbursement.getResolver().getUsername(), reimbursement.getResolver().getFirstName(),
+                    reimbursement.getResolver().getLastName(),reimbursement.getResolver().getEmailId(),reimbursement.getResolver().getUserRole());
+
+
+        } catch(NumberFormatException e){
+          throw new IllegalArgumentException("Reimbursement Id and status provided must be a int value");
+        }
+    }
+
 
     public GetReimbursementPureDTO addReimbursements(int authorId,AddReimbursementDTO dto) throws SQLException{
         ReimbursementPure reimbursementAdded = this.reimbursementDao.addReimbursements(authorId,dto);
