@@ -23,6 +23,17 @@ public class ReimbursementService {
         this.reimbursementDao = mockDao;
     }
 
+     public List<GetReimbursementDTO> getAllReimbursementsByUserId(int userId) throws SQLException {
+        List<Reimbursement> reimbursements = this.reimbursementDao.getAllReimbursementsByUserId(userId);
+
+        List<GetReimbursementDTO> dtos = new ArrayList<>();
+        for (Reimbursement r : reimbursements){
+            dtos.add(new GetReimbursementDTO(r.getId(), r.getAmount(),r.getStatus(),r.getType(), r.getSubmittedDate(), r.getResolvedDate(),
+                     r.getAuthor().getId(),r.getAuthor().getUsername(),r.getResolver().getId(),r.getResolver().getUsername()));
+        }
+        return dtos;
+     }
+
     public GetReimbursementDTO resolveReimbursement(String reimbursementId,String statusId, int resolverId) throws SQLException {
         try{
             int intReimbursementId = Integer.parseInt(reimbursementId);

@@ -49,19 +49,7 @@ public class GetReimbursementDTO {
         this.resolverEmail = resolverEmail;
         this.resolverRole = resolverRole;
     }
-//
-//    public GetReimbursementDTO(int id, int amount, String submittedDate, String status, String type, int id1, String username,
-//                               int id2, String username1) {
-//        this.id = id;
-//        this.amount = amount;
-//        this.submitDate = submittedDate;
-//        this.status = status;
-//        this.type = type;
-//        this.authorId = id1;
-//        this.authorUserName = username;
-//        this.resolverId = id2;
-//        this.resolverUserName = username1;
-//    }
+
 
     public GetReimbursementDTO(int id, int amount, String submittedDate, String status, String type, int id1, String username,
                                String firstName, String lastName, String emailId, String userRole, int id2, String username1,
@@ -83,6 +71,21 @@ public class GetReimbursementDTO {
         this.resolverLast = lastName1;
         this.resolverEmail = emailId1;
         this.resolverRole = userRole1;
+    }
+
+
+    public GetReimbursementDTO(int id, int amount, String status, String type, String submittedDate, String resolvedDate,  int id1, String username, int id2, String username1) {
+        this.id = id;
+        this.amount = amount;
+        this.status = status;
+        this.type = type;
+        this.submitDate = submittedDate;
+        this.resolveDate = resolvedDate;
+        this.authorId = id1;
+        this.authorUserName = username;
+         this.resolverId = id2;
+        this.resolverUserName = username1;
+
     }
 
 

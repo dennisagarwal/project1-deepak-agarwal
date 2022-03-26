@@ -204,6 +204,73 @@ public class ReimbursementDao {
         }
 
     }
+
+    public List<Reimbursement> getAllReimbursementsByUserId(int userId) throws SQLException {
+        try (Connection con = ConnectionUtility.getConnection()) {
+            List<Reimbursement> reimbursements = new ArrayList<>();
+            String sql = "Select reimbursements.id as rs_id, reimbursements.reimbursements_amount as rs_amount , " +
+                    " reimbursements.reimbursements_submitted as rs_submitted, reimbursements.reimbursements_resolved as rs_resolved, " +
+                    " employee_user.id as employee_id,employee_user.first_name as employee_first,employee_user.last_name as employee_last," +
+                    " employee_user.username as employee_name,employee_user.password as employee_password,employee_user.email as employee_email, " +
+                    " manager_user.id as manager_id,manager_user.first_name as manager_first,manager_user.last_name as manager_last," +
+                    " manager_user.username as manager_name,manager_user.password as manager_password,manager_user.email as manager_email, " +
+                    " rs.status ,rt.type   " +
+                    " from reimbursements " +
+                    " LEFT join users employee_user " +
+                    " on employee_user.id = reimbursements.reimbursements_author " +
+                    " LEFT join users manager_user  " +
+                    " on manager_user.id = reimbursements.reimbursements_resolver   " +
+                    " LEFT join reimbursement_status rs " +
+                    " on rs.id = reimbursements.reimbursements_status_id " +
+                    " LEFT join reimbursement_type rt  " +
+                    " on rt.id = reimbursements.reimbursements_type_id  " +
+                    " WHERE reimbursements.reimbursements_author = ? ";
+
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1,userId);
+
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()){
+                //Reimbursements
+                int rsId = rs.getInt("rs_id");
+                int rsAmount = rs.getInt("rs_amount");
+                String rsSubmitted = rs.getString("rs_submitted");
+                String rsResolved = rs.getString("rs_resolved");
+                String rsStatus = rs.getString("status");
+                String rsType = rs.getString("type");
+
+                //user employee
+                int eId = rs.getInt("employee_id");
+                String eName = rs.getString("employee_name");
+                String eFirst = rs.getString("employee_first");
+                String eLast = rs.getString("employee_last");
+                String eEmail = rs.getString("employee_email");
+                String eRole = "employee";
+//              String ePassword = rs.getString("employee_password");
+
+
+                User employee = new User(eId,eName,eFirst,eLast,eEmail,eRole);
+//              User employee = new User(eId,eName,eFirst,eLast,eEmail,eRole, ePassword);
+
+                //user manager
+                int mId = rs.getInt("manager_id");
+                String mFirst = rs.getString("manager_first");
+                String mLast = rs.getString("manager_last");
+                String mName = rs.getString("manager_name") ;
+                String mPassword = rs.getString("manager_password");
+                String mRole = "manager";
+                String mEmail = rs.getString("manager_email");
+
+//              User manager = new User(mId,mFirst,mLast,mName, mPassword, mRole,mEmail);
+                User manager = new User(mId,mFirst,mLast,mName,mEmail, mRole);
+                Reimbursement r = new Reimbursement(rsId, rsAmount, rsSubmitted, rsResolved,rsStatus,rsType, employee, manager,rsStatus);
+
+                reimbursements.add(r);
+            }
+            return reimbursements;
+        }
+
+    }
 }
 
 

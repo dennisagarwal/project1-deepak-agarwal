@@ -86,10 +86,28 @@ public class ReimbursementController implements Controller {
         this.reimbursementService = new ReimbursementService();
     }
 
+    private Handler getSpecificEmployeeReimbursements=(ctx)->{
+        String jwt = ctx.header("Authorization").split(" ")[1];
+        Jws<Claims> token = this.jwtService.parseJwt(jwt);
+
+        if (!token.getBody().get("user_role").equals("employee")) {
+            throw new UnauthorizedResponse("You must be an employee to access this endpoint");
+        }
+
+        String userId = ctx.pathParam("user_id");
+        int id = Integer.parseInt(userId);
+        if (!token.getBody().get("user_id").equals(id)) {
+            throw new UnauthorizedResponse("You cannot obtain reimbursements that don't belong to yourself");
+        }
+        List<GetReimbursementDTO> dtos = this.reimbursementService.getAllReimbursementsByUserId(id);
+        ctx.json(dtos);
+    };
+
     @Override
     public void mapEndpoints(Javalin app) {
 //        app.get("/test", test);
         app.get("/reimbursements", getAllReimbursements);
+        app.get("/user/{user_id}/reimbursements", getSpecificEmployeeReimbursements);
         app.post("/users/{user_id}/reimbursements", addReimbursements);
         app.patch("/reimbursements/{reimbursement_id}", resolveReimbursement);
     }

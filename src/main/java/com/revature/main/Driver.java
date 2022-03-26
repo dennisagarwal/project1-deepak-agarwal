@@ -21,18 +21,21 @@ public class Driver {
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
-        ReimbursementDao dao = new ReimbursementDao();
-         try{
-             System.out.println(dao.getAllReimbursements());
-         } catch (SQLException e) {
-             e.printStackTrace();
-         }
-        try {
-            ConnectionUtility.getConnection();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        Javalin app = Javalin.create();
+//        ReimbursementDao dao = new ReimbursementDao();
+//         try{
+//             System.out.println(dao.getAllReimbursements());
+//         } catch (SQLException e) {
+//             e.printStackTrace();
+//         }
+//        try {
+//            ConnectionUtility.getConnection();
+//        } catch (SQLException e) {
+//            e.printStackTrace();
+//        }
+        Javalin app = Javalin.create((config)->{
+            config.enableCorsForAllOrigins();
+            //config.enableCorsForOrigin("http://localhost:5500")
+        });
         map(app, new AuthenticationController(), new ExceptionController(), new ReimbursementController());
           app.start(8081);
 
