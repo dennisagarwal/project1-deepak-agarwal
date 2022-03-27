@@ -59,7 +59,11 @@ public class ReimbursementService {
     }
 
 
-    public GetReimbursementPureDTO addReimbursements(int authorId,AddReimbursementDTO dto) throws SQLException{
+    public GetReimbursementPureDTO addReimbursements(int authorId,AddReimbursementDTO dto, String mimeType) throws SQLException{
+
+        if(!mimeType.equals("image/jpeg") || !mimeType.equals("image/png") || !mimeType.equals("image/gif")){
+            
+        }
         ReimbursementPure reimbursementAdded = this.reimbursementDao.addReimbursements(authorId,dto);
 
         return new GetReimbursementPureDTO(reimbursementAdded.getId(),reimbursementAdded.getAmount(),reimbursementAdded.getSubmittedDate(),

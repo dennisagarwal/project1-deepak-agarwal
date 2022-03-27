@@ -76,7 +76,7 @@ public class ReimbursementController implements Controller {
         String mimeType = tika.detect(is);
         System.out.println(mimeType);
 
-        GetReimbursementPureDTO getDto = this.reimbursementService.addReimbursements(id, dto);
+        GetReimbursementPureDTO getDto = this.reimbursementService.addReimbursements(id, dto, mimeType);
         ctx.status(201);
         ctx.json(getDto);
     };
