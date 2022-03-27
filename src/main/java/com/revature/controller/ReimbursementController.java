@@ -11,9 +11,12 @@ import com.revature.service.ReimbursementService;
 import io.javalin.Javalin;
 import io.javalin.http.Handler;
 import io.javalin.http.UnauthorizedResponse;
+import io.javalin.http.UploadedFile;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
+import org.apache.tika.Tika;
 
+import java.io.InputStream;
 import java.util.List;
 
 public class ReimbursementController implements Controller {
@@ -54,7 +57,25 @@ public class ReimbursementController implements Controller {
             throw new UnauthorizedResponse("You cannot add a reimbursement for other than yourself");
         }
         ;
-        AddReimbursementDTO dto = ctx.bodyAsClass(AddReimbursementDTO.class);
+//        AddReimbursementDTO dto = ctx.bodyAsClass(AddReimbursementDTO.class);
+        String amount = ctx.formParam("amount");
+        String submitDate = ctx.formParam("submitDate");
+        String status = ctx.formParam("status");
+        String type = ctx.formParam("type");
+
+        AddReimbursementDTO dto = new AddReimbursementDTO();
+
+        dto.setAmount(Integer.parseInt(amount));
+        dto.setSubmitDate(submitDate);
+        dto.setType(Integer.parseInt(type));
+        dto.setStatus(Integer.parseInt(status));
+
+        UploadedFile file = ctx.uploadedFile("image");
+        InputStream is = file.getContent(); //This represents the byte for the file
+        Tika tika = new Tika();
+        String mimeType = tika.detect(is);
+        System.out.println(mimeType);
+
         GetReimbursementPureDTO getDto = this.reimbursementService.addReimbursements(id, dto);
         ctx.status(201);
         ctx.json(getDto);

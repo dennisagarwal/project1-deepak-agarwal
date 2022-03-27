@@ -16889,3 +16889,17 @@ java.lang.IllegalArgumentException: 'user_id' is not a valid path-param for '/us
 26 03 2022 - 19:39:36.327 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
 26 03 2022 - 19:39:36.813 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
 26 03 2022 - 19:39:36.817 [main] INFO  io.javalin.Javalin - Javalin started in 523ms \o/
+27 03 2022 - 00:26:41.073 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+27 03 2022 - 00:26:41.197 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @2474ms to org.eclipse.jetty.util.log.Slf4jLog
+27 03 2022 - 00:26:41.199 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+27 03 2022 - 00:26:41.304 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+27 03 2022 - 00:26:42.298 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+27 03 2022 - 00:26:42.298 [main] INFO  io.javalin.Javalin - Javalin started in 1100ms \o/
