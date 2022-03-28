@@ -18918,3 +18918,17 @@ org.postgresql.util.PSQLException: The column index is out of range: 2, number o
 28 03 2022 - 11:19:25.146 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
 28 03 2022 - 11:19:25.757 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
 28 03 2022 - 11:19:25.757 [main] INFO  io.javalin.Javalin - Javalin started in 640ms \o/
+28 03 2022 - 11:44:19.839 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+28 03 2022 - 11:44:19.873 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @1259ms to org.eclipse.jetty.util.log.Slf4jLog
+28 03 2022 - 11:44:19.874 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+28 03 2022 - 11:44:19.901 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+28 03 2022 - 11:44:20.471 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+28 03 2022 - 11:44:20.471 [main] INFO  io.javalin.Javalin - Javalin started in 598ms \o/
