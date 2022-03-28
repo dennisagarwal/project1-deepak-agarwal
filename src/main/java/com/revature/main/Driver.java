@@ -6,15 +6,17 @@ import com.revature.controller.Controller;
 import com.revature.controller.ExceptionController;
 import com.revature.dao.ReimbursementDao;
 import com.revature.dao.UserDao;
+import com.revature.hashing.MD5;
 import com.revature.model.User;
 import com.revature.utility.ConnectionUtility;
 import io.javalin.Javalin;
 
+import java.security.NoSuchAlgorithmException;
 import java.sql.SQLException;
 
 public class Driver {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws NoSuchAlgorithmException {
 //        User user = new User()
 //        try{
 //            System.out.println(dao.getAllReimbursements());
@@ -32,6 +34,10 @@ public class Driver {
 //        } catch (SQLException e) {
 //            e.printStackTrace();
 //        }
+//        MD5 md5 = new MD5();
+//        String s ="123456";
+//        System.out.println(md5.getMd5(s));
+
         Javalin app = Javalin.create((config)->{
             config.enableCorsForAllOrigins();
             //config.enableCorsForOrigin("http://localhost:5500")

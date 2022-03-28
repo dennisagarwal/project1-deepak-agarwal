@@ -20,7 +20,8 @@ public class UserDao {
                   " users.email FROM users " +
                   "INNER JOIN user_role " +
                   "ON users.user_role_id = user_role.id " +
-                  "WHERE users.username = ? AND users.password = ?";
+//                  "WHERE users.username = ? AND users.password = ?";
+            "WHERE users.username = ? AND users.password = crypt(?, users.password)";
 
             PreparedStatement pstmt = con.prepareStatement(sql);
             pstmt.setString(1,username);
