@@ -6,6 +6,7 @@ import com.revature.model.ReimbursementPure;
 import com.revature.model.User;
 import com.revature.utility.ConnectionUtility;
 
+import java.io.InputStream;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -100,16 +101,19 @@ public class ReimbursementDao {
 
             con.setAutoCommit(false);//we could set autocommit and at the end commit the change
             String sql = "insert into reimbursements (reimbursements_amount,reimbursements_submitted, " +
+                    "reimbursements_description,reimbursements_receipt, " +
                     "reimbursements_status_id,reimbursements_type_id, reimbursements_author) " +
-                    "values (?,?,?,?,?); ";
+                    "values (?,?,?,?,?,?,?); ";
 
             PreparedStatement pstmt1 = con.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
 
             pstmt1.setInt(1,dto.getAmount());
             pstmt1.setString(2,dto.getSubmitDate());
-            pstmt1.setInt(3,dto.getStatus());
-            pstmt1.setInt(4,dto.getType());
-            pstmt1.setInt(5,authorId);
+            pstmt1.setString(3,dto.getDescription());
+            pstmt1.setBinaryStream(4,dto.getImage());
+            pstmt1.setInt(5,dto.getStatus());
+            pstmt1.setInt(6,dto.getType());
+            pstmt1.setInt(7,authorId);
 
             pstmt1.executeUpdate();
 
@@ -270,6 +274,27 @@ public class ReimbursementDao {
             return reimbursements;
         }
 
+    }
+
+//    public InputStream getReimbursementImage(int rId, int uId) throws SQLException {
+        public InputStream getReimbursementImage(int rId) throws SQLException {
+        try (Connection con = ConnectionUtility.getConnection()){
+            String sql = "SELECT r.reimbursements_receipt "+
+                    "FROM reimbursements r " +
+                    "WHERE r.id = ? ";
+//                    "WHERE r.id = ? AND r.reimbursements_author = ? ";
+
+            PreparedStatement pstmt = con.prepareStatement(sql);
+            pstmt.setInt(1,rId);
+//            pstmt.setInt(2,uId);
+            ResultSet rs = pstmt.executeQuery();
+            if(rs.next()){
+               InputStream is = rs.getBinaryStream("reimbursements_receipt");
+               return is;
+            }else{
+                return null;
+            }
+        }
     }
 }
 

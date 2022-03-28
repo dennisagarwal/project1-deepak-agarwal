@@ -4,9 +4,14 @@ import com.revature.dao.ReimbursementDao;
 import com.revature.dto.AddReimbursementDTO;
 import com.revature.dto.GetReimbursementDTO;
 import com.revature.dto.GetReimbursementPureDTO;
+import com.revature.exception.ImageNotFoundException;
+import com.revature.exception.InvalidImageException;
 import com.revature.model.Reimbursement;
 import com.revature.model.ReimbursementPure;
+import org.apache.tika.Tika;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,10 +64,14 @@ public class ReimbursementService {
     }
 
 
-    public GetReimbursementPureDTO addReimbursements(int authorId,AddReimbursementDTO dto, String mimeType) throws SQLException{
+    public GetReimbursementPureDTO addReimbursements(int authorId,AddReimbursementDTO dto) throws SQLException,
+            InvalidImageException, IOException {
 
-        if(!mimeType.equals("image/jpeg") || !mimeType.equals("image/png") || !mimeType.equals("image/gif")){
-            
+        Tika tika = new Tika();
+        String mimeType = tika.detect(dto.getImage());
+
+        if(!mimeType.equals("image/jpeg") && !mimeType.equals("image/png") && !mimeType.equals("image/gif")){
+              throw new InvalidImageException("Image must be a JPEG, PNG, or GIF");
         }
         ReimbursementPure reimbursementAdded = this.reimbursementDao.addReimbursements(authorId,dto);
 
@@ -92,5 +101,23 @@ public class ReimbursementService {
     }
 
 
+//    public InputStream getReimbursementImage(String reimbursementId, String userId) throws SQLException, ImageNotFoundException {
+        public InputStream getReimbursementImage(String reimbursementId) throws SQLException, ImageNotFoundException {
+        try{
+            int rId = Integer.parseInt(reimbursementId);
+//            int uId = Integer.parseInt(userId);
 
+//            InputStream is = this.reimbursementDao.getReimbursementImage(rId,uId);
+            InputStream is = this.reimbursementDao.getReimbursementImage(rId);
+            if(is == null){
+                throw new ImageNotFoundException("Reimbursement id " + reimbursementId + " does not have an image");
+            }
+
+            return is;
+
+//            return this.reimbursementDao.getReimbursementImage(rId);
+        } catch (NumberFormatException e) {
+            throw new IllegalArgumentException("Reimbursement is must be an int value");
+        }
+    }
 }

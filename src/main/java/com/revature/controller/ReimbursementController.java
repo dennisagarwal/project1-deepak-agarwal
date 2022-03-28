@@ -60,6 +60,7 @@ public class ReimbursementController implements Controller {
 //        AddReimbursementDTO dto = ctx.bodyAsClass(AddReimbursementDTO.class);
         String amount = ctx.formParam("amount");
         String submitDate = ctx.formParam("submitDate");
+        String description = ctx.formParam("description");
         String status = ctx.formParam("status");
         String type = ctx.formParam("type");
 
@@ -67,16 +68,17 @@ public class ReimbursementController implements Controller {
 
         dto.setAmount(Integer.parseInt(amount));
         dto.setSubmitDate(submitDate);
+        dto.setDescription(description);
         dto.setType(Integer.parseInt(type));
         dto.setStatus(Integer.parseInt(status));
 
         UploadedFile file = ctx.uploadedFile("image");
         InputStream is = file.getContent(); //This represents the byte for the file
-        Tika tika = new Tika();
-        String mimeType = tika.detect(is);
-        System.out.println(mimeType);
 
-        GetReimbursementPureDTO getDto = this.reimbursementService.addReimbursements(id, dto, mimeType);
+        dto.setImage(is);
+//        System.out.println(mimeType);
+
+        GetReimbursementPureDTO getDto = this.reimbursementService.addReimbursements(id, dto);
         ctx.status(201);
         ctx.json(getDto);
     };
@@ -124,12 +126,42 @@ public class ReimbursementController implements Controller {
         ctx.json(dtos);
     };
 
+    private Handler getReimbursementImage = (ctx) -> {
+//
+//        String jwt = ctx.header("Authorization").split(" ")[1];
+//        Jws<Claims> token = this.jwtService.parseJwt(jwt);
+//
+//
+//
+//        if(!(token.getBody().get("user_role").equals("employee"))|| token.getBody().get("user_role").equals("manager")){
+//            throw new UnauthorizedResponse("You are not authorize to access this end point because you a manager");
+//        }
+//
+//        if(token.getBody().get("user_role").equals("employee") && !("" + token.getBody().get("user_id")).equals(userId)){
+//           throw new UnauthorizedResponse("You are a employee, but not accessing the reimbursement image that belongs " +
+//                   "to you");
+//        }
+
+        String reimbursementId = ctx.pathParam("reimbursement_id");
+//        String userId = ctx.pathParam("user_id");
+//         InputStream image = this.reimbursementService.getReimbursementImage(reimbursementId,userId);
+        InputStream image = this.reimbursementService.getReimbursementImage(reimbursementId);
+
+         Tika tika = new Tika();
+         String mimeType = tika.detect(image);
+
+         ctx.header("Content-Type", mimeType); // Tell the client what type of image is being send in the response
+        ctx.result(image);
+    };
+
     @Override
     public void mapEndpoints(Javalin app) {
 //        app.get("/test", test);
         app.get("/reimbursements", getAllReimbursements);
         app.get("/user/{user_id}/reimbursements", getSpecificEmployeeReimbursements);
         app.post("/users/{user_id}/reimbursements", addReimbursements);
+//        app.get("/users/{user_id}/reimbursement/{reimbursement_id}/image", getReimbursementImage);
+        app.get("/reimbursement/{reimbursement_id}/image", getReimbursementImage);
         app.patch("/reimbursements/{reimbursement_id}", resolveReimbursement);
     }
 }
