@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.revature.service.ReimbursementServiceTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2022-04-01T01:18:16" hostname="LAPTOP-6318QO8H" time="1.775">
+  <properties/>
+  <testcase name="testGetReimbursementsImage()" classname="com.revature.service.ReimbursementServiceTest" time="0.956"/>
+  <testcase name="testGetAllReimbursements()" classname="com.revature.service.ReimbursementServiceTest" time="0.006"/>
+  <testcase name="testResolveReimbursement()" classname="com.revature.service.ReimbursementServiceTest" time="0.001"/>
+  <testcase name="testAddReimbursements()" classname="com.revature.service.ReimbursementServiceTest" time="0.804"/>
+  <testcase name="testGetAllReimbursementsByUserId()" classname="com.revature.service.ReimbursementServiceTest" time="0.002"/>
+  <system-out><![CDATA[java.io.FileInputStream@4366ef38
+[GetReimbursementDTO{id=1, amount=800, submitDate='2022-Jan-12', resolveDate='approve', status='abc', type='manager', authorId=0, authorUserName='null', authorFirst='null', authorLast='null', authorEmail='null', authorRole='null', resolverId=0, resolverUserName='null', resolverFirst='null', resolverLast='null', resolverEmail='null', resolverRole='null'}, GetReimbursementDTO{id=1, amount=800, submitDate='2022-Jan-12', resolveDate='approve', status='abc', type='manager', authorId=0, authorUserName='null', authorFirst='null', authorLast='null', authorEmail='null', authorRole='null', resolverId=0, resolverUserName='null', resolverFirst='null', resolverLast='null', resolverEmail='null', resolverRole='null'}, GetReimbursementDTO{id=1, amount=800, submitDate='2022-Jan-12', resolveDate='approve', status='abc', type='manager', authorId=0, authorUserName='null', authorFirst='null', authorLast='null', authorEmail='null', authorRole='null', resolverId=0, resolverUserName='null', resolverFirst='null', resolverLast='null', resolverEmail='null', resolverRole='null'}]
+com.revature.ReimbursementService@40911ff
+GetReimbursementPureDTO{id=0, amount=0, submitDate='null', status=0, type=0, author=null}
+[GetReimbursementDTO{id=1, amount=800, submitDate='2022-Jan-12', resolveDate='approve', status='abc', type='manager', authorId=0, authorUserName='null', authorFirst='null', authorLast='null', authorEmail='null', authorRole='null', resolverId=0, resolverUserName='null', resolverFirst='null', resolverLast='null', resolverEmail='null', resolverRole='null'}, GetReimbursementDTO{id=2, amount=800, submitDate='2022-Jan-12', resolveDate='approve', status='abc', type='manager', authorId=0, authorUserName='null', authorFirst='null', authorLast='null', authorEmail='null', authorRole='null', resolverId=0, resolverUserName='null', resolverFirst='null', resolverLast='null', resolverEmail='null', resolverRole='null'}, GetReimbursementDTO{id=3, amount=800, submitDate='2022-Jan-12', resolveDate='approve', status='abc', type='manager', authorId=0, authorUserName='null', authorFirst='null', authorLast='null', authorEmail='null', authorRole='null', resolverId=0, resolverUserName='null', resolverFirst='null', resolverLast='null', resolverEmail='null', resolverRole='null'}]
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

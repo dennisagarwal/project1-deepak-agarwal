@@ -938,7 +938,7 @@ com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized f
 19 03 2022 - 16:41:30.727 [main] INFO  io.javalin.Javalin - Javalin started in 210ms \o/
 19 03 2022 - 16:41:42.286 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 javax.security.auth.login.FailedLoginException: Invalid username and/or password was provided
-	at com.revature.service.UserService.login(UserService.java:25)
+	at UserService.login(UserService.java:25)
 	at com.revature.controller.AuthenticationController.lambda$new$0(AuthenticationController.java:21)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -1005,7 +1005,7 @@ javax.security.auth.login.FailedLoginException: Invalid username and/or password
 19 03 2022 - 16:57:01.586 [main] INFO  io.javalin.Javalin - Javalin started in 853ms \o/
 19 03 2022 - 16:57:14.946 [JettyServerThreadPool-18] WARN  io.javalin.Javalin - Uncaught exception
 javax.security.auth.login.FailedLoginException: Invalid username and/or password was provided
-	at com.revature.service.UserService.login(UserService.java:25)
+	at UserService.login(UserService.java:25)
 	at com.revature.controller.AuthenticationController.lambda$new$0(AuthenticationController.java:19)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -1044,7 +1044,7 @@ javax.security.auth.login.FailedLoginException: Invalid username and/or password
 	at java.lang.Thread.run(Thread.java:750)
 19 03 2022 - 16:57:17.250 [JettyServerThreadPool-12] WARN  io.javalin.Javalin - Uncaught exception
 javax.security.auth.login.FailedLoginException: Invalid username and/or password was provided
-	at com.revature.service.UserService.login(UserService.java:25)
+	at UserService.login(UserService.java:25)
 	at com.revature.controller.AuthenticationController.lambda$new$0(AuthenticationController.java:19)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2202,7 +2202,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:38)
+	at JWTService.validateJwt(JWTService.java:38)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2250,7 +2250,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:38)
+	at JWTService.validateJwt(JWTService.java:38)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2298,7 +2298,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:38)
+	at JWTService.validateJwt(JWTService.java:38)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2346,7 +2346,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:38)
+	at JWTService.validateJwt(JWTService.java:38)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2394,7 +2394,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:38)
+	at JWTService.validateJwt(JWTService.java:38)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2442,7 +2442,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:38)
+	at JWTService.validateJwt(JWTService.java:38)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2490,7 +2490,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:38)
+	at JWTService.validateJwt(JWTService.java:38)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2552,7 +2552,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:38)
+	at JWTService.validateJwt(JWTService.java:38)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2613,7 +2613,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:39)
+	at JWTService.validateJwt(JWTService.java:39)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2660,7 +2660,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:39)
+	at JWTService.validateJwt(JWTService.java:39)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2708,7 +2708,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:39)
+	at JWTService.validateJwt(JWTService.java:39)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2756,7 +2756,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:39)
+	at JWTService.validateJwt(JWTService.java:39)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2804,7 +2804,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:39)
+	at JWTService.validateJwt(JWTService.java:39)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -2852,7 +2852,7 @@ java.lang.IllegalArgumentException: JWT String argument cannot be null or empty.
 	at io.jsonwebtoken.impl.DefaultJwtParser.parse(DefaultJwtParser.java:548)
 	at io.jsonwebtoken.impl.DefaultJwtParser.parseClaimsJws(DefaultJwtParser.java:610)
 	at io.jsonwebtoken.impl.ImmutableJwtParser.parseClaimsJws(ImmutableJwtParser.java:173)
-	at com.revature.service.JWTService.validateJwt(JWTService.java:39)
+	at JWTService.validateJwt(JWTService.java:39)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:30)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3511,7 +3511,7 @@ java.lang.NullPointerException: null
 22 03 2022 - 17:35:00.393 [main] INFO  io.javalin.Javalin - Javalin started in 606ms \o/
 22 03 2022 - 17:35:19.508 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3550,7 +3550,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:35:27.160 [JettyServerThreadPool-11] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3593,7 +3593,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:35:28.025 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3637,7 +3637,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:35:28.957 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3681,7 +3681,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:35:29.944 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3725,7 +3725,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:35:31.163 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3769,7 +3769,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:35:32.166 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3813,7 +3813,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:35:32.924 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3857,7 +3857,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:36:27.616 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3901,7 +3901,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:36:29.090 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3945,7 +3945,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:37:46.675 [JettyServerThreadPool-18] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -3984,7 +3984,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:37:47.601 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4028,7 +4028,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:37:48.716 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4072,7 +4072,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:37:49.580 [JettyServerThreadPool-14] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4116,7 +4116,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:37:50.632 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4160,7 +4160,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:43:15.544 [JettyServerThreadPool-14] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4204,7 +4204,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:43:16.244 [JettyServerThreadPool-12] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4248,7 +4248,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:43:16.961 [JettyServerThreadPool-14] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4292,7 +4292,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:43:17.638 [JettyServerThreadPool-12] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4336,7 +4336,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:43:18.413 [JettyServerThreadPool-14] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4380,7 +4380,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:43:19.020 [JettyServerThreadPool-12] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4424,7 +4424,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:43:19.634 [JettyServerThreadPool-14] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4468,7 +4468,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:43:22.500 [JettyServerThreadPool-12] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4512,7 +4512,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:43:23.540 [JettyServerThreadPool-14] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4556,7 +4556,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 17:43:24.307 [JettyServerThreadPool-12] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4614,7 +4614,7 @@ java.lang.NullPointerException: null
 22 03 2022 - 17:49:51.779 [main] INFO  io.javalin.Javalin - Javalin started in 501ms \o/
 22 03 2022 - 18:04:15.671 [JettyServerThreadPool-11] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4657,7 +4657,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 18:04:17.043 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4701,7 +4701,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 18:33:43.925 [JettyServerThreadPool-18] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4754,7 +4754,7 @@ java.lang.NullPointerException: null
 22 03 2022 - 18:45:59.405 [main] INFO  io.javalin.Javalin - Javalin started in 1789ms \o/
 22 03 2022 - 18:46:23.742 [JettyServerThreadPool-11] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4797,7 +4797,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 18:46:33.863 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4883,7 +4883,7 @@ java.lang.NullPointerException: null
 22 03 2022 - 19:13:50.934 [main] INFO  io.javalin.Javalin - Javalin started in 190ms \o/
 22 03 2022 - 19:14:57.246 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4927,7 +4927,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:14:58.635 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -4971,7 +4971,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:02.787 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5015,7 +5015,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:03.616 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5059,7 +5059,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:04.508 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5103,7 +5103,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:05.175 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5147,7 +5147,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:05.792 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5191,7 +5191,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:06.555 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5235,7 +5235,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:07.136 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5279,7 +5279,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:08.249 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5323,7 +5323,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:10.886 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5367,7 +5367,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:11.666 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5411,7 +5411,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:19.395 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5455,7 +5455,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:20.207 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5499,7 +5499,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:21.006 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5543,7 +5543,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:21.796 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5587,7 +5587,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:28.898 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5631,7 +5631,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:30.122 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5675,7 +5675,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:15:37.726 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5733,7 +5733,7 @@ java.lang.NullPointerException: null
 22 03 2022 - 19:20:49.330 [main] INFO  io.javalin.Javalin - Javalin started in 215ms \o/
 22 03 2022 - 19:21:24.664 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5777,7 +5777,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 19:21:27.101 [JettyServerThreadPool-18] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5849,7 +5849,7 @@ java.lang.NullPointerException: null
 22 03 2022 - 20:59:05.110 [main] INFO  io.javalin.Javalin - Javalin started in 214ms \o/
 22 03 2022 - 21:00:29.581 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5893,7 +5893,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 21:00:30.592 [JettyServerThreadPool-19] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5937,7 +5937,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 21:00:32.025 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -5981,7 +5981,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 21:06:40.355 [JettyServerThreadPool-19] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6025,7 +6025,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 21:06:41.468 [JettyServerThreadPool-15] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6097,7 +6097,7 @@ java.lang.NullPointerException: null
 22 03 2022 - 22:05:03.881 [main] INFO  io.javalin.Javalin - Javalin started in 195ms \o/
 22 03 2022 - 22:05:34.371 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6136,7 +6136,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 22:05:35.648 [JettyServerThreadPool-12] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6179,7 +6179,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 22:05:36.355 [JettyServerThreadPool-18] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6223,7 +6223,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 22:05:36.938 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6267,7 +6267,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 22:06:02.525 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6311,7 +6311,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 22:06:03.305 [JettyServerThreadPool-18] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6355,7 +6355,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 22:06:03.769 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6399,7 +6399,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 22:06:04.262 [JettyServerThreadPool-18] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6443,7 +6443,7 @@ java.lang.NullPointerException: null
 	at java.lang.Thread.run(Thread.java:750)
 22 03 2022 - 22:06:04.702 [JettyServerThreadPool-17] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6501,7 +6501,7 @@ java.lang.NullPointerException: null
 22 03 2022 - 22:12:13.919 [main] INFO  io.javalin.Javalin - Javalin started in 264ms \o/
 22 03 2022 - 22:12:28.511 [JettyServerThreadPool-19] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.NullPointerException: null
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:22)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:34)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6618,7 +6618,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6666,7 +6666,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6714,7 +6714,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6762,7 +6762,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6810,7 +6810,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6858,7 +6858,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6906,7 +6906,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -6954,7 +6954,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -7002,7 +7002,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -7050,7 +7050,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -7098,7 +7098,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -7146,7 +7146,7 @@ org.postgresql.util.PSQLException: Bad value for type int : pending
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2351)
 	at org.postgresql.jdbc.PgResultSet.getInt(PgResultSet.java:2779)
 	at com.revature.dao.ReimbursementDao.getAllReimbursements(ReimbursementDao.java:81)
-	at com.revature.service.ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
+	at ReimbursementService.getAllReimbursements(ReimbursementService.java:24)
 	at com.revature.controller.ReimbursementController.lambda$new$0(ReimbursementController.java:35)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15094,7 +15094,7 @@ org.postgresql.util.PSQLException: ERROR: column "reimbursements_submitted" is o
 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
 	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:134)
 	at com.revature.dao.ReimbursementDao.addReimbursements(ReimbursementDao.java:29)
-	at com.revature.service.ReimbursementService.addReimbursements(ReimbursementService.java:28)
+	at ReimbursementService.addReimbursements(ReimbursementService.java:28)
 	at com.revature.controller.ReimbursementController.lambda$new$1(ReimbursementController.java:65)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15143,7 +15143,7 @@ org.postgresql.util.PSQLException: ERROR: column "reimbursements_submitted" is o
 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
 	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:134)
 	at com.revature.dao.ReimbursementDao.addReimbursements(ReimbursementDao.java:29)
-	at com.revature.service.ReimbursementService.addReimbursements(ReimbursementService.java:28)
+	at ReimbursementService.addReimbursements(ReimbursementService.java:28)
 	at com.revature.controller.ReimbursementController.lambda$new$1(ReimbursementController.java:65)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15211,7 +15211,7 @@ org.postgresql.util.PSQLException: ERROR: column "reimbursements_submitted" is o
 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
 	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:134)
 	at com.revature.dao.ReimbursementDao.addReimbursements(ReimbursementDao.java:29)
-	at com.revature.service.ReimbursementService.addReimbursements(ReimbursementService.java:28)
+	at ReimbursementService.addReimbursements(ReimbursementService.java:28)
 	at com.revature.controller.ReimbursementController.lambda$new$1(ReimbursementController.java:65)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15271,7 +15271,7 @@ org.postgresql.util.PSQLException: No value specified for parameter 1.
 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:118)
 	at com.revature.dao.ReimbursementDao.addReimbursements(ReimbursementDao.java:38)
-	at com.revature.service.ReimbursementService.addReimbursements(ReimbursementService.java:28)
+	at ReimbursementService.addReimbursements(ReimbursementService.java:28)
 	at com.revature.controller.ReimbursementController.lambda$new$1(ReimbursementController.java:65)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15317,7 +15317,7 @@ org.postgresql.util.PSQLException: No value specified for parameter 1.
 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
 	at org.postgresql.jdbc.PgPreparedStatement.executeQuery(PgPreparedStatement.java:118)
 	at com.revature.dao.ReimbursementDao.addReimbursements(ReimbursementDao.java:38)
-	at com.revature.service.ReimbursementService.addReimbursements(ReimbursementService.java:28)
+	at ReimbursementService.addReimbursements(ReimbursementService.java:28)
 	at com.revature.controller.ReimbursementController.lambda$new$1(ReimbursementController.java:65)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15612,7 +15612,7 @@ org.postgresql.util.PSQLException: No value specified for parameter 1.
 24 03 2022 - 16:27:33.226 [main] INFO  io.javalin.Javalin - Javalin started in 312ms \o/
 24 03 2022 - 16:33:00.776 [JettyServerThreadPool-16] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.IllegalArgumentException: Reimbursement Id and status provided must e int value
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15670,7 +15670,7 @@ java.lang.IllegalArgumentException: Reimbursement Id and status provided must e 
 24 03 2022 - 17:16:14.863 [main] INFO  io.javalin.Javalin - Javalin started in 235ms \o/
 24 03 2022 - 17:16:30.201 [JettyServerThreadPool-19] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.IllegalArgumentException: Reimbursement Id and status provided must be a int value
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15723,7 +15723,7 @@ java.lang.IllegalArgumentException: Reimbursement Id and status provided must be
 24 03 2022 - 17:24:24.438 [main] INFO  io.javalin.Javalin - Javalin started in 231ms \o/
 24 03 2022 - 17:24:29.952 [JettyServerThreadPool-19] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.IllegalArgumentException: Reimbursement Id and status provided must be a int value
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15776,7 +15776,7 @@ java.lang.IllegalArgumentException: Reimbursement Id and status provided must be
 24 03 2022 - 17:24:57.150 [main] INFO  io.javalin.Javalin - Javalin started in 291ms \o/
 24 03 2022 - 17:24:58.906 [JettyServerThreadPool-18] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.IllegalArgumentException: Reimbursement Id and status provided must be a int value
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15829,7 +15829,7 @@ java.lang.IllegalArgumentException: Reimbursement Id and status provided must be
 24 03 2022 - 17:26:21.155 [main] INFO  io.javalin.Javalin - Javalin started in 295ms \o/
 24 03 2022 - 17:26:24.546 [JettyServerThreadPool-19] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.IllegalArgumentException: Reimbursement Id and status provided must be a int value
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15868,7 +15868,7 @@ java.lang.IllegalArgumentException: Reimbursement Id and status provided must be
 	at java.lang.Thread.run(Thread.java:750)
 24 03 2022 - 17:26:26.231 [JettyServerThreadPool-12] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.IllegalArgumentException: Reimbursement Id and status provided must be a int value
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15925,7 +15925,7 @@ java.lang.IllegalArgumentException: Reimbursement Id and status provided must be
 24 03 2022 - 17:29:17.438 [main] INFO  io.javalin.Javalin - Javalin started in 234ms \o/
 24 03 2022 - 17:29:21.792 [JettyServerThreadPool-18] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.IllegalArgumentException: Reimbursement Id and status provided must be a int value
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -15964,7 +15964,7 @@ java.lang.IllegalArgumentException: Reimbursement Id and status provided must be
 	at java.lang.Thread.run(Thread.java:750)
 24 03 2022 - 17:29:22.911 [JettyServerThreadPool-12] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.IllegalArgumentException: Reimbursement Id and status provided must be a int value
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -16021,7 +16021,7 @@ java.lang.IllegalArgumentException: Reimbursement Id and status provided must be
 24 03 2022 - 17:33:52.495 [main] INFO  io.javalin.Javalin - Javalin started in 355ms \o/
 24 03 2022 - 17:33:59.123 [JettyServerThreadPool-12] WARN  io.javalin.Javalin - Uncaught exception
 java.lang.IllegalArgumentException: Reimbursement Id and status provided must be a int value
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:40)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -16087,7 +16087,7 @@ org.postgresql.util.PSQLException: ERROR: syntax error at or near "reimbursement
 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
 	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:134)
 	at com.revature.dao.ReimbursementDao.resolveReimbursement(ReimbursementDao.java:32)
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:32)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:32)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -16135,7 +16135,7 @@ org.postgresql.util.PSQLException: ERROR: syntax error at or near "reimbursement
 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
 	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:134)
 	at com.revature.dao.ReimbursementDao.resolveReimbursement(ReimbursementDao.java:32)
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:32)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:32)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -16201,7 +16201,7 @@ org.postgresql.util.PSQLException: ERROR: syntax error at or near "where"
 	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:166)
 	at org.postgresql.jdbc.PgPreparedStatement.executeUpdate(PgPreparedStatement.java:134)
 	at com.revature.dao.ReimbursementDao.resolveReimbursement(ReimbursementDao.java:29)
-	at com.revature.service.ReimbursementService.resolveReimbursement(ReimbursementService.java:32)
+	at ReimbursementService.resolveReimbursement(ReimbursementService.java:32)
 	at com.revature.controller.ReimbursementController.lambda$new$2(ReimbursementController.java:78)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -17034,7 +17034,7 @@ org.postgresql.util.PSQLException: The column name reimbursement_image was not f
 	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2901)
 	at org.postgresql.jdbc.PgResultSet.getBinaryStream(PgResultSet.java:2834)
 	at com.revature.dao.ReimbursementDao.getReimbursementImage(ReimbursementDao.java:290)
-	at com.revature.service.ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
+	at ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
 	at com.revature.controller.ReimbursementController.lambda$new$4(ReimbursementController.java:147)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -17076,7 +17076,7 @@ org.postgresql.util.PSQLException: The column name reimbursement_image was not f
 	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2901)
 	at org.postgresql.jdbc.PgResultSet.getBinaryStream(PgResultSet.java:2834)
 	at com.revature.dao.ReimbursementDao.getReimbursementImage(ReimbursementDao.java:290)
-	at com.revature.service.ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
+	at ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
 	at com.revature.controller.ReimbursementController.lambda$new$4(ReimbursementController.java:147)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -17122,7 +17122,7 @@ org.postgresql.util.PSQLException: The column name reimbursement_image was not f
 	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2901)
 	at org.postgresql.jdbc.PgResultSet.getBinaryStream(PgResultSet.java:2834)
 	at com.revature.dao.ReimbursementDao.getReimbursementImage(ReimbursementDao.java:290)
-	at com.revature.service.ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
+	at ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
 	at com.revature.controller.ReimbursementController.lambda$new$4(ReimbursementController.java:147)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -17169,7 +17169,7 @@ org.postgresql.util.PSQLException: The column name reimbursement_image was not f
 	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2901)
 	at org.postgresql.jdbc.PgResultSet.getBinaryStream(PgResultSet.java:2834)
 	at com.revature.dao.ReimbursementDao.getReimbursementImage(ReimbursementDao.java:290)
-	at com.revature.service.ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
+	at ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
 	at com.revature.controller.ReimbursementController.lambda$new$4(ReimbursementController.java:147)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -17230,7 +17230,7 @@ org.postgresql.util.PSQLException: The column name reimbursement_receipt was not
 	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2901)
 	at org.postgresql.jdbc.PgResultSet.getBinaryStream(PgResultSet.java:2834)
 	at com.revature.dao.ReimbursementDao.getReimbursementImage(ReimbursementDao.java:290)
-	at com.revature.service.ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
+	at ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
 	at com.revature.controller.ReimbursementController.lambda$new$4(ReimbursementController.java:147)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -17272,7 +17272,7 @@ org.postgresql.util.PSQLException: The column name reimbursement_receipt was not
 	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2901)
 	at org.postgresql.jdbc.PgResultSet.getBinaryStream(PgResultSet.java:2834)
 	at com.revature.dao.ReimbursementDao.getReimbursementImage(ReimbursementDao.java:290)
-	at com.revature.service.ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
+	at ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
 	at com.revature.controller.ReimbursementController.lambda$new$4(ReimbursementController.java:147)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -17318,7 +17318,7 @@ org.postgresql.util.PSQLException: The column name reimbursement_receipt was not
 	at org.postgresql.jdbc.PgResultSet.findColumn(PgResultSet.java:2901)
 	at org.postgresql.jdbc.PgResultSet.getBinaryStream(PgResultSet.java:2834)
 	at com.revature.dao.ReimbursementDao.getReimbursementImage(ReimbursementDao.java:290)
-	at com.revature.service.ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
+	at ReimbursementService.getReimbursementImage(ReimbursementService.java:109)
 	at com.revature.controller.ReimbursementController.lambda$new$4(ReimbursementController.java:147)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -18853,7 +18853,7 @@ org.postgresql.util.PSQLException: The column index is out of range: 2, number o
 	at org.postgresql.jdbc.PgPreparedStatement.setString(PgPreparedStatement.java:364)
 	at org.postgresql.jdbc.PgPreparedStatement.setString(PgPreparedStatement.java:350)
 	at com.revature.dao.UserDao.getUserByUsernameAndPassword(UserDao.java:28)
-	at com.revature.service.UserService.login(UserService.java:22)
+	at UserService.login(UserService.java:22)
 	at com.revature.controller.AuthenticationController.lambda$new$0(AuthenticationController.java:26)
 	at io.javalin.core.security.SecurityUtil.noopAccessManager(SecurityUtil.kt:20)
 	at io.javalin.http.JavalinServlet.addHandler$lambda-5(JavalinServlet.kt:115)
@@ -18932,3 +18932,204 @@ org.postgresql.util.PSQLException: The column index is out of range: 2, number o
 28 03 2022 - 11:44:19.901 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
 28 03 2022 - 11:44:20.471 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
 28 03 2022 - 11:44:20.471 [main] INFO  io.javalin.Javalin - Javalin started in 598ms \o/
+28 03 2022 - 16:44:04.726 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+28 03 2022 - 16:44:04.754 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @588ms to org.eclipse.jetty.util.log.Slf4jLog
+28 03 2022 - 16:44:04.756 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+28 03 2022 - 16:44:04.786 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+28 03 2022 - 16:44:05.237 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+28 03 2022 - 16:44:05.238 [main] INFO  io.javalin.Javalin - Javalin started in 483ms \o/
+29 03 2022 - 16:10:52.540 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+29 03 2022 - 16:10:52.577 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @586ms to org.eclipse.jetty.util.log.Slf4jLog
+29 03 2022 - 16:10:52.578 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+29 03 2022 - 16:10:52.602 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+29 03 2022 - 16:10:53.061 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+29 03 2022 - 16:10:53.061 [main] INFO  io.javalin.Javalin - Javalin started in 484ms \o/
+30 03 2022 - 12:22:12.639 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 12:22:12.851 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @5575ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 12:22:12.852 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 12:22:13.325 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 12:22:14.752 [main] ERROR io.javalin.Javalin - Failed to start Javalin
+30 03 2022 - 12:22:14.753 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+30 03 2022 - 12:22:14.770 [main] INFO  io.javalin.Javalin - Javalin has stopped
+30 03 2022 - 12:25:33.668 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 12:25:33.691 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @957ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 12:25:33.692 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 12:25:33.727 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 12:25:34.093 [main] ERROR io.javalin.Javalin - Failed to start Javalin
+30 03 2022 - 12:25:34.094 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+30 03 2022 - 12:25:34.111 [main] INFO  io.javalin.Javalin - Javalin has stopped
+30 03 2022 - 12:26:03.628 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 12:26:03.648 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @780ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 12:26:03.649 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 12:26:03.674 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 12:26:04.059 [main] ERROR io.javalin.Javalin - Failed to start Javalin
+30 03 2022 - 12:26:04.059 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+30 03 2022 - 12:26:04.068 [main] INFO  io.javalin.Javalin - Javalin has stopped
+30 03 2022 - 12:27:31.031 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 12:27:31.051 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @805ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 12:27:31.052 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 12:27:31.088 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 12:27:31.508 [main] ERROR io.javalin.Javalin - Failed to start Javalin
+30 03 2022 - 12:27:31.508 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+30 03 2022 - 12:27:31.522 [main] INFO  io.javalin.Javalin - Javalin has stopped
+30 03 2022 - 12:32:53.081 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 12:32:53.104 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @953ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 12:32:53.105 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 12:32:53.236 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 12:32:54.015 [main] ERROR io.javalin.Javalin - Failed to start Javalin
+30 03 2022 - 12:32:54.015 [main] INFO  io.javalin.Javalin - Stopping Javalin ...
+30 03 2022 - 12:32:54.046 [main] INFO  io.javalin.Javalin - Javalin has stopped
+30 03 2022 - 12:33:52.483 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 12:33:52.512 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @954ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 12:33:52.515 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 12:33:52.545 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 12:33:53.409 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+30 03 2022 - 12:33:53.409 [main] INFO  io.javalin.Javalin - Javalin started in 895ms \o/
+30 03 2022 - 12:56:46.538 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 12:56:46.594 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @6607ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 12:56:46.596 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 12:56:46.924 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 12:56:48.327 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+30 03 2022 - 12:56:48.328 [main] INFO  io.javalin.Javalin - Javalin started in 1733ms \o/
+30 03 2022 - 15:48:15.801 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 15:48:15.838 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @2372ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 15:48:15.841 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 15:48:15.881 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 15:48:18.000 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+30 03 2022 - 15:48:18.000 [main] INFO  io.javalin.Javalin - Javalin started in 2160ms \o/
+30 03 2022 - 17:51:29.886 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 17:51:29.917 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @5245ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 17:51:29.920 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 17:51:30.094 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 17:51:30.770 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+30 03 2022 - 17:51:30.771 [main] INFO  io.javalin.Javalin - Javalin started in 852ms \o/
+30 03 2022 - 19:12:40.506 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 19:12:40.523 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @2757ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 19:12:40.525 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 19:12:40.668 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 19:12:41.330 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+30 03 2022 - 19:12:41.330 [main] INFO  io.javalin.Javalin - Javalin started in 806ms \o/
+30 03 2022 - 19:21:40.883 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 19:21:40.898 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @638ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 19:21:40.898 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 19:21:40.929 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 19:21:41.337 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+30 03 2022 - 19:21:41.337 [main] INFO  io.javalin.Javalin - Javalin started in 439ms \o/
+30 03 2022 - 21:20:05.656 [main] INFO  io.javalin.Javalin - 
+       __                      __ _            __ __
+      / /____ _ _   __ ____ _ / /(_)____      / // /
+ __  / // __ `/| | / // __ `// // // __ \    / // /_
+/ /_/ // /_/ / | |/ // /_/ // // // / / /   /__  __/
+\____/ \__,_/  |___/ \__,_//_//_//_/ /_/      /_/
+
+          https://javalin.io/documentation
+
+30 03 2022 - 21:20:05.859 [main] INFO  org.eclipse.jetty.util.log - Logging initialized @756ms to org.eclipse.jetty.util.log.Slf4jLog
+30 03 2022 - 21:20:05.860 [main] INFO  io.javalin.Javalin - Starting Javalin ...
+30 03 2022 - 21:20:05.885 [main] INFO  io.javalin.Javalin - You are running Javalin 4.3.0 (released January 13, 2022).
+30 03 2022 - 21:20:07.123 [main] INFO  io.javalin.Javalin - Listening on http://localhost:8081/
+30 03 2022 - 21:20:07.124 [main] INFO  io.javalin.Javalin - Javalin started in 1265ms \o/

@@ -1,13 +1,10 @@
 package com.revature.controller;
 
-import com.fasterxml.jackson.core.JsonGenerationException;
 import com.revature.dto.AddReimbursementDTO;
 import com.revature.dto.GetReimbursementDTO;
 import com.revature.dto.GetReimbursementPureDTO;
-import com.revature.model.Reimbursement;
-import com.revature.model.User;
-import com.revature.service.JWTService;
-import com.revature.service.ReimbursementService;
+import com.revature.JWTService;
+import com.revature.ReimbursementService;
 import io.javalin.Javalin;
 import io.javalin.http.Handler;
 import io.javalin.http.UnauthorizedResponse;

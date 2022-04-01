@@ -18,6 +18,7 @@ public class GetReimbursementPureDTO {
 
     }
 
+
     public GetReimbursementPureDTO(int id, int amount, String submitDate, int status, int type, User author) {
         this.id = id;
         this.amount = amount;

@@ -1,4 +1,4 @@
-package com.revature.service;
+package com.revature;
 
 import com.revature.dao.ReimbursementDao;
 import com.revature.dto.AddReimbursementDTO;

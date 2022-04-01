@@ -18,6 +18,17 @@ public class AddReimbursementDTO {
     public AddReimbursementDTO() {
     }
 
+    public AddReimbursementDTO(int i, String submitDate, String resolveDate, String description, int i1, int i2, InputStream testImage) {
+        this.amount=i;
+        this.submitDate=submitDate;
+        this.resolveDate=resolveDate;
+        this.description=description;
+        this.status=i1;
+        this.type=i2;
+        this.image=testImage;
+    }
+
+
     public int getAmount() {
         return amount;
     }

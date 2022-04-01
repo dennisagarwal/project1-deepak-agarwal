@@ -2,16 +2,10 @@ package com.revature.controller;
 
 import com.revature.dto.LoginDTO;
 import com.revature.model.User;
-import com.revature.service.JWTService;
-import com.revature.service.UserService;
+import com.revature.JWTService;
+import com.revature.UserService;
 import io.javalin.Javalin;
 import io.javalin.http.Handler;
-import io.javalin.http.UnauthorizedResponse;
-import io.jsonwebtoken.Claims;
-import io.jsonwebtoken.Jws;
-
-import javax.security.auth.login.FailedLoginException;
-import javax.servlet.http.HttpSession;
 
 public class AuthenticationController implements Controller {
 

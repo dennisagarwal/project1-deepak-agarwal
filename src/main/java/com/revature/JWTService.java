@@ -1,4 +1,4 @@
-package com.revature.service;
+package com.revature;
 
 import com.revature.model.User;
 import io.javalin.http.UnauthorizedResponse;
