@@ -39,7 +39,7 @@ public class JWTService {
             return token;
 
         }catch(JwtException e){
-            e.printStackTrace();
+//            e.printStackTrace();
             throw new UnauthorizedResponse("JWT was invalid");
         }
     }
